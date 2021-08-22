@@ -8,3 +8,17 @@
     border-style: solid;
     border-color: $fifth-color;
 }
+
+.grid{
+    /*make the content stack on top of each other and be in a grid*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    width: 618px;
+    height: 618px;
+}
+
+.game-title{
+    text-align: center;
+}
