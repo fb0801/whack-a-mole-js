@@ -1,17 +1,19 @@
-const square =document.querySelectorAll('.square') //get all the elements called sqaure
+const squares =document.querySelectorAll('.square') //get all the elements called sqaure
 const mole = document.querySelectorAll('.mole')//get all the mole elements
 const timeLeft = document.querySelector('#time-left')
-let score = document.querySelector('#score')
+const score = document.querySelector('#score')
 
 let result = 0
-let currentTime = timeLeft.textContent
+let currentTime = 60
+let hitPosition
+let timerId = null //use let as the data will always change
 
 function randomSquare(){
-    square.forEach(className =>{
+    squares.forEach(square =>{
         //remove the class names and mole
-        className.classList.remove('mole')
+        square.classList.remove('mole')
     })
-    let randomPosition = square[Math.floor(Math.random()) * 9]
+    let randomPosition = squares[Math.floor(Math.random() * 9)]
     //give a random position 
     randomPosition.classList.add('mole')
 
@@ -20,12 +22,14 @@ hitPosition = randomPosition.id
 
 }
 
-square.forEach(id => {
-    id.addEventListener('mouseup', () =>{
+squares.forEach(square => {
+    sqaure.addEventListener('mousedown', () => {
     // if hit with our mouse and id = to our postion then we win the game
-    if(id.id===hitPosition){
-        result = result + 1
+    if(square.id == hitPosition){
+        //result = result + 1
+        result++
         score.textContent = result
+        hitPosition = null
     }
 })
 })
@@ -33,7 +37,7 @@ square.forEach(id => {
 
 //move the mole
 function moveMole(){
-    let timerId = null //use let as the data will always change
+    
     timerId = setInterval(randomSquare, 1000)
 }
 
@@ -45,10 +49,12 @@ function countDown(){
     currentTime--
     timeLeft.textContent = currentTime
 
-    if(currentTime===0){
+    if(currentTime==0){
+        clearInterval(countDownTimerId)
         clearInterval(timerId)
         alert('GAME OVER! Final score is: ' + result)
     }
 }
 
-let timerId = setInterval(countDown, 1000)
+//let timerId = setInterval(countDown, 1000)
+let countDownTimerId = setInterval(countDown, 1000)
