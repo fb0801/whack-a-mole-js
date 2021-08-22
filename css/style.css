@@ -1,5 +1,6 @@
 /*import other files to use*/
 /*different colours to use*/
+/*other variables to use*/
 /*Media queries*/
 .square {
   width: 200px;
@@ -18,6 +19,21 @@
   height: 618px;
 }
 
+.game-text {
+  float: right;
+}
+
 .game-title {
   text-align: center;
+  color: #272727;
+}
+
+.mole {
+  background-image: url("images/mole.jpg");
+  background-size: cover;
+}
+
+.my-mole {
+  height: 100px;
+  width: 100px;
 }/*# sourceMappingURL=style.css.map */

@@ -19,6 +19,21 @@
     height: 618px;
 }
 
+.game-text{
+float: $content-setting-3;
+}
+
 .game-title{
-    text-align: center;
+    text-align: $content-setting-1;
+    color:$primary-color;
+}
+
+.mole{
+    background-image: url('images/mole.jpg');
+    background-size: cover;
+}
+
+.my-mole{
+    height: 100px;
+    width: 100px;
 }

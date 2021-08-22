@@ -6,6 +6,13 @@ $forth-color:#ff652f;
 $fifth-color: #0099cc;
 
 
+
+/*other variables to use*/
+$content-setting-1: center;
+$content-setting-2: left;
+$content-setting-3: right;
+
+
 /*Media queries*/
 @mixin media-sm {
     @media screen and  (min-width:600px) {
