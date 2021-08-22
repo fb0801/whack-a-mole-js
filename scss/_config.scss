@@ -1,0 +1,30 @@
+/*different colours to use*/
+$primary-color: #272727;
+$secondary-color:#fff;
+$third-color:#f2f2f2;
+$forth-color:#ff652f;
+$fifth-color: #0099cc;
+
+
+/*Media queries*/
+@mixin media-sm {
+    @media screen and  (min-width:600px) {
+       @content;
+    }
+}
+
+@mixin media-med {
+    @media screen and (min-width:800px) {
+        @content;
+       
+    }
+}
+
+@mixin media-med-2 {
+    @media screen and (min-width:750px){
+        
+        @content;
+        
+    }
+    
+}

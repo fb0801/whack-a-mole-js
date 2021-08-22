@@ -1,0 +1,10 @@
+/*import other files to use*/
+@import 'config';
+
+
+.sqaure{
+    width: 200px;
+    height:200px;
+    border-style: solid;
+    border-color: $fifth-color;
+}
